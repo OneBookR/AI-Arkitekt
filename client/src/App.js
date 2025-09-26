@@ -132,7 +132,7 @@ function App() {
     window.location.href = `${API_BASE}/auth/github`;
   };
 
-  const fetchUserRepos = async () => {
+  const fetchUserRepos = React.useCallback(async () => {
     try {
       const res = await fetch(`${API_BASE}/api/user/repos`, {
         credentials: 'include'
@@ -142,7 +142,7 @@ function App() {
     } catch (error) {
       console.error('Error fetching repos:', error);
     }
-  };
+  }, [API_BASE]);
 
   const handleGithubAnalysis = async () => {
     if (!selectedRepo) return;
@@ -206,7 +206,7 @@ function App() {
       }
     };
     checkAuth();
-  }, []);
+  }, [API_BASE, fetchUserRepos]);
 
   const renderSuggestions = () => {
     if (!result?.suggestions) return null;
