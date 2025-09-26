@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 const session = require('express-session');
 const passport = require('passport');
 const GitHubStrategy = require('passport-github2').Strategy;
@@ -281,14 +282,33 @@ app.get('/api-catalog', (req, res) => {
   res.json(catalog.apis);
 });
 
-// Root route
+// Serve static files from React build
+app.use(express.static(path.join(__dirname, 'client/build')));
+
+// Root route - serve React app
 app.get('/', (req, res) => {
-  res.json({ 
-    message: 'AI-Arkitekt API Server', 
-    status: 'running',
-    endpoints: ['/upload', '/analyze-github', '/health'],
-    timestamp: new Date().toISOString() 
-  });
+  const buildPath = path.join(__dirname, 'client/build/index.html');
+  if (require('fs').existsSync(buildPath)) {
+    res.sendFile(buildPath);
+  } else {
+    res.json({ 
+      message: 'AI-Arkitekt API Server', 
+      status: 'running',
+      endpoints: ['/upload', '/analyze-github', '/health'],
+      timestamp: new Date().toISOString(),
+      note: 'Frontend not built yet. Run npm run build first.'
+    });
+  }
+});
+
+// Catch all handler for React routes
+app.get('*', (req, res) => {
+  const buildPath = path.join(__dirname, 'client/build/index.html');
+  if (require('fs').existsSync(buildPath)) {
+    res.sendFile(buildPath);
+  } else {
+    res.status(404).json({ error: 'Frontend not found' });
+  }
 });
 
 // Health check
