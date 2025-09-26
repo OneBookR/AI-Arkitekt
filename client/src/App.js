@@ -32,6 +32,8 @@ function App() {
   const [githubUser, setGithubUser] = useState(null);
   const [userRepos, setUserRepos] = useState([]);
   const [selectedRepo, setSelectedRepo] = useState(null);
+  
+  const API_BASE = process.env.NODE_ENV === 'production' ? '' : 'http://localhost:3002';
 
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
@@ -68,7 +70,7 @@ function App() {
       setProgress(20);
       setProgressStage('Skickar till server...');
       
-      const res = await fetch('http://localhost:3002/upload', {
+      const res = await fetch(`${API_BASE}/upload`, {
         method: 'POST',
         body: formData
       });
@@ -82,7 +84,7 @@ function App() {
         
         const pollProgress = async () => {
           try {
-            const progressRes = await fetch(`http://localhost:3002/api/legacy-progress/${data.analysisId}`);
+            const progressRes = await fetch(`${API_BASE}/api/legacy-progress/${data.analysisId}`);
             const progressData = await progressRes.json();
             
             console.log('Progress data:', progressData);
@@ -127,12 +129,12 @@ function App() {
   };
 
   const handleGithubLogin = () => {
-    window.location.href = 'http://localhost:3002/auth/github';
+    window.location.href = `${API_BASE}/auth/github`;
   };
 
   const fetchUserRepos = async () => {
     try {
-      const res = await fetch('http://localhost:3002/api/user/repos', {
+      const res = await fetch(`${API_BASE}/api/user/repos`, {
         credentials: 'include'
       });
       const data = await res.json();
@@ -152,7 +154,7 @@ function App() {
       setProgress(30);
       setProgressStage('Laddar repository...');
       
-      const res = await fetch('http://localhost:3002/analyze-github', {
+      const res = await fetch(`${API_BASE}/analyze-github`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
@@ -191,7 +193,7 @@ function App() {
   React.useEffect(() => {
     const checkAuth = async () => {
       try {
-        const res = await fetch('http://localhost:3002/api/user', {
+        const res = await fetch(`${API_BASE}/api/user`, {
           credentials: 'include'
         });
         if (res.ok) {

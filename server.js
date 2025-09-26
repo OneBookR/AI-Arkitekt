@@ -9,7 +9,7 @@ const GitHubStrategy = require('passport-github2').Strategy;
 const app = express();
 
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production' ? true : 'http://localhost:3000',
+  origin: process.env.NODE_ENV === 'production' ? 'https://ai-arkitekt-production.up.railway.app' : 'http://localhost:3000',
   credentials: true
 }));
 app.use(express.json());
@@ -26,7 +26,7 @@ if (process.env.GITHUB_CLIENT_ID && process.env.GITHUB_CLIENT_SECRET) {
   passport.use(new GitHubStrategy({
     clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
-    callbackURL: 'http://localhost:3002/auth/github/callback'
+    callbackURL: process.env.NODE_ENV === 'production' ? 'https://ai-arkitekt-production.up.railway.app/auth/github/callback' : 'http://localhost:3002/auth/github/callback'
   }, (accessToken, refreshToken, profile, done) => {
     profile.accessToken = accessToken;
     return done(null, profile);
@@ -52,15 +52,15 @@ app.get('/auth/github', (req, res) => {
       photos: [{ value: 'https://github.com/identicons/testuser.png' }],
       accessToken: 'mock-token'
     };
-    return res.redirect('http://localhost:3000');
+    return res.redirect(process.env.NODE_ENV === 'production' ? 'https://ai-arkitekt-production.up.railway.app' : 'http://localhost:3000');
   }
   passport.authenticate('github', { scope: ['repo'] })(req, res);
 });
 
 app.get('/auth/github/callback', 
-  passport.authenticate('github', { failureRedirect: 'http://localhost:3000' }),
+  passport.authenticate('github', { failureRedirect: process.env.NODE_ENV === 'production' ? 'https://ai-arkitekt-production.up.railway.app' : 'http://localhost:3000' }),
   (req, res) => {
-    res.redirect('http://localhost:3000');
+    res.redirect(process.env.NODE_ENV === 'production' ? 'https://ai-arkitekt-production.up.railway.app' : 'http://localhost:3000');
   }
 );
 
