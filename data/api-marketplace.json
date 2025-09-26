@@ -1,0 +1,489 @@
+{
+  "payments": [
+    {
+      "name": "Stripe",
+      "company": "Stripe Inc.",
+      "url": "https://stripe.com",
+      "logo": "https://images.ctfassets.net/fzn2n1nzq965/HTTOloNPhisV9P4hlMPNA/cacf1bb88b9fc492dfad34378d844280/Stripe_icon_-_square.svg",
+      "description": "Världens mest utvecklarvänliga betalningsinfrastruktur som hanterar miljontals transaktioner för företag från startups till Fortune 500.",
+      "detailed_description": "Stripe revolutionerar online-betalningar genom att göra det enkelt för utvecklare att integrera säkra, skalbar betalningslösningar. Med stöd för 135+ valutor och alla stora betalmetoder, plus avancerade funktioner som prenumerationshantering, marketplace-betalningar och fraud-skydd.",
+      "key_features": [
+        "Kortbetalningar (Visa, Mastercard, Amex, etc.)",
+        "Digitala plånböcker (Apple Pay, Google Pay)",
+        "Prenumerationer och återkommande betalningar",
+        "Marketplace och split payments",
+        "Avancerat fraud-skydd med ML",
+        "Global betalningsoptimering",
+        "Detaljerad analytics och rapportering",
+        "PCI DSS Level 1 compliance"
+      ],
+      "pricing": {
+        "transaction_fee": "2.9% + 30¢ per lyckad transaktion",
+        "international_cards": "+1.5%",
+        "currency_conversion": "+1%",
+        "subscriptions": "0.5% extra",
+        "setup_fee": "$0",
+        "monthly_fee": "$0"
+      },
+      "integration": {
+        "complexity": "Low-Medium",
+        "setup_time": "2-4 timmar",
+        "sdks": ["JavaScript", "React", "Node.js", "Python", "PHP", "Ruby", "Go"],
+        "webhooks": "Ja, omfattande webhook-system",
+        "testing": "Komplett test-miljö med mock-data"
+      },
+      "business_impact": {
+        "conversion_increase": "15-25%",
+        "checkout_abandonment_reduction": "20%",
+        "global_reach": "195+ länder",
+        "fraud_reduction": "Up to 50%",
+        "development_time_saved": "80%"
+      },
+      "pros": [
+        "Excellent utvecklarupplevelse och dokumentation",
+        "Mycket säker och PCI-compliant",
+        "Global räckvidd med lokal optimering",
+        "Kraftfull dashboard och analytics",
+        "Omfattande API med webhooks",
+        "Snabb implementation",
+        "24/7 support"
+      ],
+      "cons": [
+        "Högre avgifter för små volymer",
+        "Kan hålla kvar pengar vid misstänkt aktivitet",
+        "Begränsad i vissa högrisk-industrier",
+        "Kräver SSL-certifikat",
+        "Komplex prissättning för avancerade funktioner"
+      ],
+      "use_cases": [
+        "E-handel och online-butiker",
+        "SaaS-prenumerationer",
+        "Marketplace-plattformar",
+        "Crowdfunding-plattformar",
+        "Event-biljetter",
+        "Donation-plattformar"
+      ],
+      "competitors": ["PayPal", "Square", "Adyen", "Braintree"],
+      "implementation_guide": {
+        "step_1": "Skapa Stripe-konto och hämta API-nycklar",
+        "step_2": "Installera Stripe SDK: npm install stripe",
+        "step_3": "Implementera Stripe Elements för säker kortinmatning",
+        "step_4": "Skapa backend-endpoint för betalningsintention",
+        "step_5": "Hantera webhooks för betalningsstatus",
+        "step_6": "Testa med Stripe test-kort",
+        "step_7": "Aktivera live-läge och börja ta emot betalningar"
+      },
+      "code_example": "// Skapa betalningsintention\nconst paymentIntent = await stripe.paymentIntents.create({\n  amount: 2000,\n  currency: 'sek',\n  metadata: {order_id: '12345'}\n});",
+      "gdpr_compliant": true,
+      "security_certifications": ["PCI DSS Level 1", "SOC 2 Type II", "ISO 27001"]
+    },
+    {
+      "name": "Klarna",
+      "company": "Klarna Bank AB",
+      "url": "https://www.klarna.com",
+      "description": "Europas ledande 'buy now, pay later'-tjänst som ökar köpkraft och konvertering genom flexibla betalningsalternativ.",
+      "detailed_description": "Klarna transformerar e-handelsupplevelsen genom att erbjuda flexibla betalningsalternativ som ökar kundernas köpkraft. Med över 150 miljoner aktiva användare globalt, hjälper Klarna företag att öka genomsnittlig ordervolym med 30% och minska cart abandonment.",
+      "key_features": [
+        "Pay in 4 - dela upp köp i 4 räntefria delbetalningar",
+        "Pay in 30 days - betala inom 30 dagar",
+        "Financing - längre finansieringsalternativ",
+        "Pay now - direktbetalning",
+        "In-store payments - fysiska butiker",
+        "Smooth checkout-upplevelse",
+        "Köparskydd och garantier",
+        "Realtids kreditbedömning"
+      ],
+      "pricing": {
+        "pay_now": "2.49% + 30¢",
+        "pay_later": "3.29% + 30¢",
+        "financing": "3.29% - 8.99% + 30¢",
+        "setup_fee": "$0",
+        "monthly_fee": "$0",
+        "chargeback_fee": "$25"
+      },
+      "integration": {
+        "complexity": "Low",
+        "setup_time": "1-2 timmar",
+        "sdks": ["JavaScript", "iOS", "Android", "React Native"],
+        "webhooks": "Ja, för orderuppdateringar",
+        "testing": "Playground-miljö för testning"
+      },
+      "business_impact": {
+        "average_order_value_increase": "30%",
+        "conversion_rate_increase": "20%",
+        "cart_abandonment_reduction": "25%",
+        "customer_acquisition": "+15%",
+        "repeat_purchases": "+40%"
+      },
+      "pros": [
+        "Ökar genomsnittlig ordervolym betydligt",
+        "Populärt bland millennials och Gen Z",
+        "Smooth och snabb checkout",
+        "Inbyggt köparskydd",
+        "Stark varumärkeskännedom i Europa",
+        "Minskar risk för merchants",
+        "Bra mobil-upplevelse"
+      ],
+      "cons": [
+        "Begränsat till vissa marknader",
+        "Kräver kreditkontroll av kunder",
+        "Högre avgifter än traditionella betalningar",
+        "Kan påverka kundlojalitet (fokus på Klarna-appen)",
+        "Striktare merchant-krav"
+      ],
+      "target_markets": ["Sverige", "Norge", "Danmark", "Finland", "Tyskland", "UK", "USA", "Australien"],
+      "use_cases": [
+        "Fashion och kläder",
+        "Elektronik och gadgets",
+        "Heminredning och möbler",
+        "Skönhet och kosmetika",
+        "Sport och fritid",
+        "Högre prispunkter (>500 SEK)"
+      ],
+      "implementation_guide": {
+        "step_1": "Ansök om Klarna merchant-konto",
+        "step_2": "Integrera Klarna Payments SDK",
+        "step_3": "Konfigurera betalningsmetoder",
+        "step_4": "Implementera order management",
+        "step_5": "Sätt upp webhooks för orderuppdateringar",
+        "step_6": "Testa med Klarna playground",
+        "step_7": "Go live efter Klarna-godkännande"
+      },
+      "gdpr_compliant": true,
+      "security_certifications": ["PCI DSS", "ISO 27001", "Banking License (EU)"]
+    }
+  ],
+  "analytics": [
+    {
+      "name": "Mixpanel",
+      "company": "Mixpanel Inc.",
+      "url": "https://mixpanel.com",
+      "description": "Avancerad produktanalys som spårar användarresor och optimerar konvertering genom datadriven insikt.",
+      "detailed_description": "Mixpanel är den ledande plattformen för produktanalys som hjälper företag förstå hur användare interagerar med deras produkter. Genom att spåra events istället för bara sidvisningar, ger Mixpanel djupare insikter som leder till 25% förbättring i användarretention och 40% ökning i produktengagemang.",
+      "key_features": [
+        "Event-baserad tracking (inte bara sidvisningar)",
+        "Funnel-analys för konverteringsoptimering",
+        "Cohort-analys för retention-insikter",
+        "A/B-testning och feature flags",
+        "Real-time dashboards och alerts",
+        "Användarprofilering och segmentering",
+        "Prediktiv analys med ML",
+        "Cross-platform tracking (web, mobil, server)"
+      ],
+      "pricing": {
+        "free_tier": "Gratis upp till 100K events/månad",
+        "growth": "$25/månad för 100K events",
+        "enterprise": "Från $833/månad för 10M events",
+        "data_retention": "5 år på alla planer",
+        "custom_pricing": "Tillgänglig för stora volymer"
+      },
+      "integration": {
+        "complexity": "Medium",
+        "setup_time": "4-8 timmar",
+        "sdks": ["JavaScript", "React", "iOS", "Android", "Python", "Node.js", "PHP"],
+        "data_import": "CSV, API, warehouse connectors",
+        "real_time": "Ja, events visas inom sekunder"
+      },
+      "business_impact": {
+        "user_retention_improvement": "25%",
+        "product_engagement_increase": "40%",
+        "conversion_optimization": "30%",
+        "feature_adoption": "50% snabbare",
+        "churn_reduction": "20%"
+      },
+      "pros": [
+        "Mycket detaljerad användaranalys",
+        "Real-time data och dashboards",
+        "Kraftfulla segmenteringsverktyg",
+        "Bra för produktteam och growth hackers",
+        "Intuitiv interface",
+        "Stark cohort- och funnel-analys",
+        "Bra integration med andra verktyg"
+      ],
+      "cons": [
+        "Kan bli komplext för nybörjare",
+        "Dyr för stora datavolymer",
+        "Kräver noggrann event-planering",
+        "Begränsad gratis version",
+        "Kan vara overkill för enkla webbsidor"
+      ],
+      "use_cases": [
+        "SaaS-produkter och appar",
+        "E-handelsoptimering",
+        "Mobila appar",
+        "Gaming och entertainment",
+        "Fintech och banking",
+        "Produktutveckling och growth"
+      ],
+      "key_metrics": [
+        "Daily/Monthly Active Users (DAU/MAU)",
+        "Retention rates (Day 1, 7, 30)",
+        "Conversion funnels",
+        "Feature adoption rates",
+        "User lifetime value",
+        "Churn prediction"
+      ],
+      "implementation_guide": {
+        "step_1": "Planera event-struktur och naming convention",
+        "step_2": "Installera Mixpanel SDK i din app",
+        "step_3": "Implementera tracking för key events",
+        "step_4": "Sätt upp user profiles och properties",
+        "step_5": "Skapa dashboards för viktiga metrics",
+        "step_6": "Konfigurera funnels och cohorts",
+        "step_7": "Sätt upp alerts för viktiga förändringar"
+      },
+      "gdpr_compliant": true,
+      "data_privacy": "EU data residency, data deletion, consent management"
+    },
+    {
+      "name": "Hotjar",
+      "company": "Hotjar Ltd.",
+      "url": "https://www.hotjar.com",
+      "description": "Visuell användaranalys genom heatmaps, session recordings och feedback för att förstå användarbeteende.",
+      "detailed_description": "Hotjar ger dig röntgenblick på hur användare verkligen interagerar med din webbsida. Genom heatmaps, session recordings och direktfeedback från användare, hjälper Hotjar företag identifiera och fixa UX-problem som kan kosta upp till 15% i konvertering. Över 1 miljon webbsidor använder Hotjar för att förbättra användarupplevelsen.",
+      "key_features": [
+        "Heatmaps - se var användare klickar och scrollar",
+        "Session recordings - titta på riktiga användarsessioner",
+        "Conversion funnels - identifiera drop-off punkter",
+        "Form analytics - se var användare slutar fylla i formulär",
+        "Feedback polls - samla in användaråsikter",
+        "Surveys - djupare användarinsikter",
+        "User interviews - kvalitativ feedback",
+        "A/B testing insights"
+      ],
+      "pricing": {
+        "free_tier": "Gratis upp till 35 sessioner/dag",
+        "plus": "$32/månad för 100 sessioner/dag",
+        "business": "$80/månad för 500 sessioner/dag",
+        "scale": "$171/månad för 1000 sessioner/dag",
+        "annual_discount": "20% rabatt på årlig betalning"
+      },
+      "integration": {
+        "complexity": "Very Low",
+        "setup_time": "15 minuter",
+        "installation": "En rad JavaScript-kod",
+        "platforms": ["WordPress", "Shopify", "Squarespace", "Custom HTML"],
+        "gdpr_tools": "Inbyggda privacy-kontroller"
+      },
+      "business_impact": {
+        "ux_problem_identification": "90% snabbare",
+        "conversion_improvement": "15-30%",
+        "form_completion_increase": "25%",
+        "user_satisfaction": "+20%",
+        "development_efficiency": "+40%"
+      },
+      "pros": [
+        "Extremt enkelt att implementera",
+        "Visuell data som är lätt att förstå",
+        "Bra för UX-optimering",
+        "Hjälper identifiera tekniska problem",
+        "Bra gratis version för små sajter",
+        "GDPR-compliant med privacy-kontroller",
+        "Integrerar med Google Analytics"
+      ],
+      "cons": [
+        "Kan påverka sidladdningshastighet",
+        "Begränsad i gratis version",
+        "Inte lika djup som dedikerade analytics-verktyg",
+        "Kan vara privacy-känsligt",
+        "Begränsad för mobila appar"
+      ],
+      "use_cases": [
+        "E-handelsoptimering",
+        "Landing page-optimering",
+        "Formuläroptimering",
+        "UX-research och design",
+        "Conversion rate optimization",
+        "Webbsideredesign",
+        "Användarupplevelse-audit"
+      ],
+      "key_insights": [
+        "Var användare klickar mest",
+        "Hur långt ner användare scrollar",
+        "Vilka element som ignoreras",
+        "Var användare slutar i formulär",
+        "Tekniska problem som påverkar UX",
+        "Mobil vs desktop-beteende"
+      ],
+      "implementation_guide": {
+        "step_1": "Skapa Hotjar-konto och välj plan",
+        "step_2": "Installera tracking-kod på webbsidan",
+        "step_3": "Konfigurera heatmaps för viktiga sidor",
+        "step_4": "Aktivera session recordings",
+        "step_5": "Sätt upp conversion funnels",
+        "step_6": "Skapa feedback polls för specifika sidor",
+        "step_7": "Analysera data och implementera förbättringar"
+      },
+      "gdpr_compliant": true,
+      "privacy_features": ["IP anonymization", "Data retention controls", "Consent management", "EU data hosting"]
+    }
+  ],
+  "search": [
+    {
+      "name": "Algolia",
+      "company": "Algolia Inc.",
+      "url": "https://www.algolia.com",
+      "description": "Branschledande sökning-as-a-service med AI-funktioner för blixtsnabb och relevant sökning.",
+      "detailed_description": "Algolia revolutionerar sökupplevelsen med sub-millisekund responstider och AI-driven relevans. Använt av över 17,000 företag inklusive Stripe, Slack och Medium, hjälper Algolia öka sökkonvertering med 45% och minska 'no results' med 70% genom intelligent sökning som förstår användarintention.",
+      "key_features": [
+        "Blixtsnabb sökning (<1ms responstid)",
+        "AI-driven relevans och ranking",
+        "Typo-tolerans och synonym-hantering",
+        "Faceted search och filtering",
+        "Geo-search för location-baserad sökning",
+        "Personalisering baserat på användarbeteende",
+        "A/B-testning av sökresultat",
+        "Analytics och sökinsikter",
+        "Voice search-stöd",
+        "Visual search med bilduppladdning"
+      ],
+      "pricing": {
+        "build_plan": "Gratis upp till 10K sökningar/månad",
+        "grow_plan": "$500/månad för 100K sökningar",
+        "premium_plan": "Från $1500/månad för 1M sökningar",
+        "enterprise": "Custom pricing för stora volymer",
+        "overage_cost": "$0.50 per 1K extra sökningar"
+      },
+      "integration": {
+        "complexity": "Low-Medium",
+        "setup_time": "2-4 timmar",
+        "sdks": ["JavaScript", "React", "Vue", "Angular", "iOS", "Android", "PHP", "Python"],
+        "apis": ["Search API", "Indexing API", "Analytics API", "Personalization API"],
+        "frameworks": ["InstantSearch.js", "React InstantSearch", "Vue InstantSearch"]
+      },
+      "business_impact": {
+        "search_conversion_increase": "45%",
+        "zero_results_reduction": "70%",
+        "user_engagement_increase": "25%",
+        "search_to_sale_improvement": "30%",
+        "mobile_performance": "3x snabbare"
+      },
+      "pros": [
+        "Extremt snabb sökning och indexering",
+        "Excellent utvecklarupplevelse",
+        "Kraftfull analytics och A/B-testning",
+        "Skalbar till miljoner dokument",
+        "Bra för e-handel och innehållssajter",
+        "Stark community och dokumentation",
+        "Inbyggd personalisering och AI"
+      ],
+      "cons": [
+        "Kan bli dyrt för stora volymer",
+        "Begränsad anpassning av ranking-algoritm",
+        "Kräver omstrukturering av befintlig söklogik",
+        "Vendor lock-in",
+        "Begränsad offline-funktionalitet"
+      ],
+      "use_cases": [
+        "E-handelsproduktssökning",
+        "Innehållssökning (bloggar, dokumentation)",
+        "Jobbsökning och rekrytering",
+        "Fastighetssökning",
+        "Media och entertainment",
+        "SaaS-produkter med stora datamängder"
+      ],
+      "key_features_detail": {
+        "typo_tolerance": "Automatisk felrättning och fuzzy matching",
+        "synonyms": "Intelligent synonym-hantering och query expansion",
+        "faceting": "Dynamiska filter baserat på innehåll",
+        "geo_search": "Location-baserad sökning och ranking",
+        "personalization": "ML-baserad personalisering av sökresultat"
+      },
+      "implementation_guide": {
+        "step_1": "Skapa Algolia-konto och index",
+        "step_2": "Importera och strukturera sökdata",
+        "step_3": "Konfigurera relevans-inställningar",
+        "step_4": "Implementera frontend med InstantSearch",
+        "step_5": "Sätt upp facets och filter",
+        "step_6": "Konfigurera analytics och A/B-tester",
+        "step_7": "Optimera baserat på sökbeteende"
+      },
+      "gdpr_compliant": true,
+      "security_features": ["SOC 2 Type II", "GDPR compliance", "Data encryption", "Access controls"]
+    }
+  ],
+  "communication": [
+    {
+      "name": "SendGrid",
+      "company": "Twilio SendGrid",
+      "url": "https://sendgrid.com",
+      "description": "Världsledande e-postleveransplattform för transaktionsmail och marknadsföring.",
+      "detailed_description": "SendGrid är den mest pålitliga e-postinfrastrukturen som levererar över 100 miljarder e-postmeddelanden årligen. Med 99%+ leveransgrad och kraftfulla API:er, hjälper SendGrid företag bygga meningsfulla kundrelationer genom e-post. Från transaktionsmail till avancerade marknadsföringskampanjer.",
+      "key_features": [
+        "Transaktionsmail med hög leveransgrad",
+        "E-postmarknadsföring och kampanjer",
+        "Drag-and-drop e-postdesigner",
+        "A/B-testning av e-postinnehåll",
+        "Avancerad segmentering",
+        "Automatiserade e-postsekvenser",
+        "Real-time analytics och rapporter",
+        "Webhook-integration för events",
+        "IP-warming och reputation management",
+        "SMTP relay och Web API"
+      ],
+      "pricing": {
+        "free_tier": "Gratis upp till 100 e-post/dag",
+        "essentials": "$14.95/månad för 50K e-post",
+        "pro": "$89.95/månad för 100K e-post",
+        "premier": "$399/månad för 1.2M e-post",
+        "overage": "$0.85 per 1K extra e-post"
+      },
+      "integration": {
+        "complexity": "Low",
+        "setup_time": "1-2 timmar",
+        "apis": ["Web API v3", "SMTP", "Webhooks"],
+        "sdks": ["Node.js", "Python", "PHP", "Ruby", "Java", "C#", "Go"],
+        "authentication": "API keys, OAuth 2.0"
+      },
+      "business_impact": {
+        "email_deliverability": "99%+",
+        "engagement_increase": "35%",
+        "automation_efficiency": "80% tidsbesparing",
+        "customer_retention": "+20%",
+        "revenue_per_email": "+25%"
+      },
+      "pros": [
+        "Excellent leveransgrad och reputation",
+        "Kraftfull API och dokumentation",
+        "Skalbar från startup till enterprise",
+        "Bra gratis tier för utveckling",
+        "Omfattande analytics och insights",
+        "Stark spam-filter undvikande",
+        "24/7 expert support"
+      ],
+      "cons": [
+        "Kan bli dyrt för stora volymer",
+        "Begränsad design-flexibilitet i templates",
+        "Kräver teknisk kunskap för avancerade funktioner",
+        "Strikt policy kan leda till konto-suspension",
+        "Begränsad automation i lägre planer"
+      ],
+      "use_cases": [
+        "Transaktionsmail (kvitton, lösenordsåterställning)",
+        "Välkomstserier för nya användare",
+        "E-handelsmarknadsföring",
+        "Nyhetsbrev och content marketing",
+        "Event-baserade kampanjer",
+        "Återvinning av övergivna kundvagnar",
+        "Kundlojalitetsprogram"
+      ],
+      "email_types": {
+        "transactional": "Kvitton, bekräftelser, notifikationer",
+        "marketing": "Kampanjer, nyhetsbrev, erbjudanden",
+        "automated": "Drip-kampanjer, triggered emails",
+        "behavioral": "Baserat på användaraktiviteter"
+      },
+      "implementation_guide": {
+        "step_1": "Skapa SendGrid-konto och verifiera domän",
+        "step_2": "Konfigurera DNS-poster för autentisering",
+        "step_3": "Skapa API-nycklar för integration",
+        "step_4": "Implementera e-postsändning i applikation",
+        "step_5": "Sätt upp webhooks för event-tracking",
+        "step_6": "Skapa e-postmallar och kampanjer",
+        "step_7": "Övervaka leveransgrad och optimera"
+      },
+      "gdpr_compliant": true,
+      "compliance": ["GDPR", "CAN-SPAM", "CASL", "SOC 2 Type II", "ISO 27001"]
+    }
+  ]
+}

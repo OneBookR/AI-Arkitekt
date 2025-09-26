@@ -1,0 +1,290 @@
+{
+  "conversational_ai": [
+    {
+      "name": "OpenAI GPT-4",
+      "company": "OpenAI",
+      "url": "https://openai.com",
+      "description": "Världens mest avancerade språkmodell med överlägsen förståelse för naturlig konversation och komplex problemlösning.",
+      "capabilities": [
+        "Naturlig språkförståelse",
+        "Kodgenerering och debugging",
+        "Kreativ skrivning och innehållsskapande",
+        "Flerspråkigt stöd (50+ språk)",
+        "Matematisk och logisk resonering"
+      ],
+      "pricing": {
+        "model": "pay-per-use",
+        "input_cost": "$0.03 per 1K tokens",
+        "output_cost": "$0.06 per 1K tokens",
+        "context_window": "128K tokens"
+      },
+      "use_cases": [
+        "Kundtjänstchatbots",
+        "Innehållsgenerering",
+        "Kodassistans",
+        "Språköversättning",
+        "Dokumentanalys"
+      ],
+      "pros": [
+        "Bäst i klassen för naturlig dialog",
+        "Mycket stor kunskapsbas",
+        "Kontinuerliga modelluppdateringar",
+        "Robust API med bra dokumentation",
+        "Stöder function calling för integrationer"
+      ],
+      "cons": [
+        "Högre kostnad än konkurrenter",
+        "Kräver noggrann prompt engineering",
+        "Kan hallucinera fakta",
+        "Rate limits kan vara begränsande"
+      ],
+      "integration_complexity": "Medium",
+      "gdpr_compliant": true,
+      "business_impact": {
+        "customer_satisfaction": "+40%",
+        "support_cost_reduction": "60%",
+        "response_time": "95% snabbare",
+        "24_7_availability": true
+      }
+    },
+    {
+      "name": "Anthropic Claude",
+      "company": "Anthropic",
+      "url": "https://anthropic.com",
+      "description": "Säkerhetsfokuserad AI-assistent med stark etisk grund, designad för pålitliga och hjälpsamma svar i känsliga sammanhang.",
+      "capabilities": [
+        "Säker och pålitlig konversation",
+        "Etisk resonering",
+        "Långt kontextfönster (200K tokens)",
+        "Kodanalys och generering",
+        "Dokumentbearbetning"
+      ],
+      "pricing": {
+        "model": "pay-per-use",
+        "input_cost": "$0.008 per 1K tokens",
+        "output_cost": "$0.024 per 1K tokens",
+        "context_window": "200K tokens"
+      },
+      "use_cases": [
+        "Säker kundtjänst",
+        "Innehållsmoderering",
+        "Juridisk assistans",
+        "Utbildningsverktyg",
+        "Forskningsassistans"
+      ],
+      "pros": [
+        "Mycket säker och pålitlig",
+        "Bra för känslig kunddata",
+        "Kostnadseffektiv",
+        "Stort kontextfönster",
+        "Mindre benägen att hallucinera"
+      ],
+      "cons": [
+        "Mindre kreativ än GPT-4",
+        "Begränsad tillgänglighet",
+        "Mindre känd bland användare",
+        "Färre integrationer tillgängliga"
+      ],
+      "integration_complexity": "Medium",
+      "gdpr_compliant": true,
+      "business_impact": {
+        "trust_increase": "+35%",
+        "compliance_improvement": "+50%",
+        "risk_reduction": "High",
+        "cost_efficiency": "+25%"
+      }
+    },
+    {
+      "name": "Google Bard/Gemini",
+      "company": "Google",
+      "url": "https://ai.google.dev",
+      "description": "Googles multimodala AI-modell med stark integration till Google-ekosystemet och realtidsdata.",
+      "capabilities": [
+        "Multimodal förståelse (text, bild, kod)",
+        "Realtidsinformation via Google Search",
+        "Kodgenerering och debugging",
+        "Integration med Google Workspace",
+        "Avancerad matematisk resonering"
+      ],
+      "pricing": {
+        "model": "freemium",
+        "free_tier": "60 requests per minute",
+        "paid_tier": "$0.0025 per 1K characters",
+        "context_window": "32K tokens"
+      },
+      "use_cases": [
+        "Informationssökning",
+        "Produktivitetsverktyg",
+        "Kodassistans",
+        "Innehållsskapande",
+        "Dataanalys"
+      ],
+      "pros": [
+        "Tillgång till realtidsdata",
+        "Stark Google-integration",
+        "Kostnadseffektiv",
+        "Multimodala kapaciteter",
+        "Snabb utveckling och uppdateringar"
+      ],
+      "cons": [
+        "Mindre mogen än OpenAI",
+        "Begränsad tillgänglighet i vissa regioner",
+        "Mindre tredjepartsintegrationer",
+        "Potentiella integritetsfrågor"
+      ],
+      "integration_complexity": "Low-Medium",
+      "gdpr_compliant": "Partial",
+      "business_impact": {
+        "productivity_increase": "+30%",
+        "information_accuracy": "+40%",
+        "integration_efficiency": "+50%",
+        "cost_savings": "+35%"
+      }
+    }
+  ],
+  "computer_vision": [
+    {
+      "name": "OpenAI DALL-E 3",
+      "company": "OpenAI",
+      "url": "https://openai.com/dall-e-3",
+      "description": "Avancerad AI för bildgenerering från textbeskrivningar med hög kvalitet och kreativitet.",
+      "capabilities": [
+        "Text-till-bild generering",
+        "Stilkonsistent bildproduktion",
+        "Hög upplösning (1024x1024)",
+        "Säker innehållsfiltrering",
+        "API-integration"
+      ],
+      "pricing": {
+        "model": "pay-per-image",
+        "standard_cost": "$0.040 per image (1024×1024)",
+        "hd_cost": "$0.080 per HD image",
+        "bulk_discounts": "Available for high volume"
+      },
+      "use_cases": [
+        "Produktvisualisering",
+        "Marknadsföringsmaterial",
+        "Sociala medier-innehåll",
+        "Prototyping och design",
+        "Personaliserade bilder"
+      ],
+      "pros": [
+        "Högsta bildkvalitet",
+        "Säker och etisk",
+        "Enkel API-integration",
+        "Konsistent stil",
+        "Snabb generering"
+      ],
+      "cons": [
+        "Relativt dyr per bild",
+        "Begränsningar på vissa innehållstyper",
+        "Kräver tydliga prompter",
+        "Ingen fine-tuning möjlighet"
+      ],
+      "integration_complexity": "Low",
+      "gdpr_compliant": true,
+      "business_impact": {
+        "content_creation_speed": "+300%",
+        "design_cost_reduction": "70%",
+        "creative_output": "+200%",
+        "time_to_market": "50% snabbare"
+      }
+    },
+    {
+      "name": "Stability AI SDXL",
+      "company": "Stability AI",
+      "url": "https://stability.ai",
+      "description": "Open source-baserad bildgenerering med hög anpassningsbarhet och kostnadseffektivitet.",
+      "capabilities": [
+        "Text-till-bild generering",
+        "Bild-till-bild transformation",
+        "Fine-tuning möjligheter",
+        "Olika stilar och modeller",
+        "Self-hosting alternativ"
+      ],
+      "pricing": {
+        "model": "flexible",
+        "api_cost": "$0.002 per image",
+        "self_hosted": "Free (compute costs)",
+        "enterprise": "Custom pricing"
+      },
+      "use_cases": [
+        "Bulk bildproduktion",
+        "Anpassade stilar",
+        "Produktfotografering",
+        "Konstnärligt innehåll",
+        "Prototyping"
+      ],
+      "pros": [
+        "Mycket kostnadseffektiv",
+        "Open source flexibilitet",
+        "Anpassningsbar",
+        "Snabb generering",
+        "Ingen vendor lock-in"
+      ],
+      "cons": [
+        "Kräver mer teknisk expertis",
+        "Mindre säkerhetsfilter",
+        "Varierande kvalitet",
+        "Mer komplext att implementera"
+      ],
+      "integration_complexity": "Medium-High",
+      "gdpr_compliant": true,
+      "business_impact": {
+        "cost_efficiency": "+400%",
+        "customization_capability": "+300%",
+        "production_volume": "+500%",
+        "creative_control": "Full"
+      }
+    }
+  ],
+  "speech_ai": [
+    {
+      "name": "ElevenLabs",
+      "company": "ElevenLabs",
+      "url": "https://elevenlabs.io",
+      "description": "Branschledande AI för röstsyntes och kloning med naturligt ljud och emotionell uttryck.",
+      "capabilities": [
+        "Realistisk röstsyntes",
+        "Röstkloning från samples",
+        "Flerspråkigt stöd",
+        "Emotionell intonation",
+        "Realtids streaming"
+      ],
+      "pricing": {
+        "model": "subscription + usage",
+        "starter": "$5/month (30K characters)",
+        "creator": "$22/month (100K characters)",
+        "pro": "$99/month (500K characters)"
+      },
+      "use_cases": [
+        "Audioböcker och podcasts",
+        "Röstassistenter",
+        "Videoproduktion",
+        "Tillgänglighetsverktyg",
+        "Interaktiva upplevelser"
+      ],
+      "pros": [
+        "Extremt naturligt ljud",
+        "Snabb röstkloning",
+        "Bra API-dokumentation",
+        "Emotionell uttryck",
+        "Flera språk"
+      ],
+      "cons": [
+        "Kan vara dyrt för stora volymer",
+        "Etiska frågor kring röstkloning",
+        "Begränsad gratis tier",
+        "Kräver kvalitetssamples för kloning"
+      ],
+      "integration_complexity": "Low-Medium",
+      "gdpr_compliant": true,
+      "business_impact": {
+        "content_accessibility": "+200%",
+        "production_efficiency": "+150%",
+        "user_engagement": "+60%",
+        "global_reach": "+100%"
+      }
+    }
+  ]
+}

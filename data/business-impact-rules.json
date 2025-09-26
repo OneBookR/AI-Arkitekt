@@ -1,0 +1,227 @@
+{
+  "impact_multipliers": {
+    "ecommerce": {
+      "payment_integration": 2.5,
+      "personalization": 3.0,
+      "search_optimization": 2.2,
+      "chatbot": 1.8,
+      "analytics": 2.0,
+      "email_marketing": 1.9
+    },
+    "saas": {
+      "analytics": 3.0,
+      "chatbot": 2.5,
+      "payment_integration": 2.8,
+      "user_onboarding": 2.3,
+      "feature_flags": 1.7,
+      "monitoring": 2.1
+    },
+    "content": {
+      "search_optimization": 2.8,
+      "analytics": 2.2,
+      "email_marketing": 2.5,
+      "social_integration": 1.9,
+      "seo_tools": 2.4,
+      "content_ai": 2.0
+    },
+    "marketplace": {
+      "payment_integration": 3.2,
+      "trust_safety": 2.8,
+      "search_optimization": 2.5,
+      "communication": 2.3,
+      "analytics": 2.4,
+      "personalization": 2.1
+    }
+  },
+  "revenue_impact_formulas": {
+    "ai_chatbot": {
+      "support_cost_reduction": {
+        "formula": "current_support_cost * 0.6",
+        "description": "60% minskning av supportkostnader genom automatisering"
+      },
+      "conversion_increase": {
+        "formula": "monthly_visitors * current_conversion_rate * 0.15",
+        "description": "15% ökning av konvertering genom bättre kundservice"
+      },
+      "customer_satisfaction": {
+        "formula": "customer_lifetime_value * 0.2",
+        "description": "20% ökning av kundnöjdhet leder till högre retention"
+      }
+    },
+    "personalization_engine": {
+      "revenue_increase": {
+        "formula": "monthly_revenue * 0.35",
+        "description": "35% ökning av intäkter genom personaliserade rekommendationer"
+      },
+      "average_order_value": {
+        "formula": "current_aov * 0.25",
+        "description": "25% ökning av genomsnittlig ordervolym"
+      },
+      "customer_retention": {
+        "formula": "monthly_revenue * 0.15",
+        "description": "15% förbättring av kundretention"
+      }
+    },
+    "advanced_search": {
+      "search_conversion": {
+        "formula": "search_traffic * current_search_conversion * 0.45",
+        "description": "45% ökning av sökkonvertering"
+      },
+      "zero_results_recovery": {
+        "formula": "zero_result_sessions * average_session_value * 0.7",
+        "description": "70% minskning av 'no results' sessioner"
+      }
+    },
+    "payment_optimization": {
+      "cart_abandonment_reduction": {
+        "formula": "abandoned_carts * average_cart_value * 0.2",
+        "description": "20% minskning av övergivna kundvagnar"
+      },
+      "international_expansion": {
+        "formula": "current_revenue * 0.3",
+        "description": "30% intäktsökning genom global betalningsoptimering"
+      }
+    }
+  },
+  "cost_benefit_analysis": {
+    "implementation_costs": {
+      "ai_integration": {
+        "development_hours": 120,
+        "hourly_rate": 1000,
+        "third_party_costs": 500,
+        "monthly_operational": 200
+      },
+      "payment_integration": {
+        "development_hours": 40,
+        "hourly_rate": 1000,
+        "third_party_costs": 0,
+        "monthly_operational": 0
+      },
+      "search_upgrade": {
+        "development_hours": 80,
+        "hourly_rate": 1000,
+        "third_party_costs": 500,
+        "monthly_operational": 500
+      },
+      "analytics_implementation": {
+        "development_hours": 60,
+        "hourly_rate": 1000,
+        "third_party_costs": 100,
+        "monthly_operational": 100
+      }
+    },
+    "roi_timeframes": {
+      "quick_wins": {
+        "timeframe": "1-3 månader",
+        "examples": ["Payment integration", "Basic analytics", "Email marketing"],
+        "typical_roi": "200-400%"
+      },
+      "medium_term": {
+        "timeframe": "3-6 månader", 
+        "examples": ["AI chatbot", "Search optimization", "Personalization"],
+        "typical_roi": "300-600%"
+      },
+      "long_term": {
+        "timeframe": "6-12 månader",
+        "examples": ["Advanced AI", "Full personalization", "Predictive analytics"],
+        "typical_roi": "400-800%"
+      }
+    }
+  },
+  "industry_benchmarks": {
+    "ecommerce": {
+      "average_conversion_rate": 2.86,
+      "average_cart_abandonment": 69.57,
+      "average_customer_acquisition_cost": 45,
+      "average_customer_lifetime_value": 168,
+      "mobile_traffic_percentage": 54.8
+    },
+    "saas": {
+      "average_conversion_rate": 3.2,
+      "average_churn_rate": 5.2,
+      "average_customer_acquisition_cost": 205,
+      "average_customer_lifetime_value": 1200,
+      "trial_to_paid_conversion": 15.7
+    },
+    "content": {
+      "average_bounce_rate": 58.18,
+      "average_session_duration": 2.17,
+      "average_pages_per_session": 2.5,
+      "email_open_rate": 21.33,
+      "social_media_conversion": 1.85
+    }
+  },
+  "risk_factors": {
+    "technical_risks": {
+      "integration_complexity": {
+        "low": 0.1,
+        "medium": 0.25,
+        "high": 0.4,
+        "description": "Risk för förseningar och extra kostnader"
+      },
+      "scalability_issues": {
+        "probability": 0.15,
+        "impact": "20% extra kostnader",
+        "mitigation": "Välj skalbar arkitektur från start"
+      },
+      "security_vulnerabilities": {
+        "probability": 0.1,
+        "impact": "Potentiell dataläcka och böter",
+        "mitigation": "Säkerhetsaudit och penetrationstester"
+      }
+    },
+    "business_risks": {
+      "user_adoption": {
+        "low_adoption_probability": 0.2,
+        "impact": "50% lägre ROI än förväntat",
+        "mitigation": "Användarutbildning och gradvis utrullning"
+      },
+      "market_changes": {
+        "probability": 0.15,
+        "impact": "Förändrade kundbehov",
+        "mitigation": "Flexibel arkitektur och kontinuerlig optimering"
+      },
+      "competitor_response": {
+        "probability": 0.3,
+        "impact": "Minskad konkurrensfördel",
+        "mitigation": "Kontinuerlig innovation och förbättring"
+      }
+    }
+  },
+  "success_metrics": {
+    "leading_indicators": [
+      "Implementation timeline adherence",
+      "User adoption rate",
+      "System performance metrics",
+      "Integration success rate",
+      "Team training completion"
+    ],
+    "lagging_indicators": [
+      "Revenue increase",
+      "Cost reduction",
+      "Customer satisfaction scores",
+      "Market share growth",
+      "Return on investment"
+    ],
+    "kpi_targets": {
+      "ai_chatbot": {
+        "response_time": "<2 seconds",
+        "resolution_rate": ">80%",
+        "customer_satisfaction": ">4.5/5",
+        "cost_per_interaction": "<$0.50"
+      },
+      "personalization": {
+        "click_through_rate": "+25%",
+        "conversion_rate": "+35%",
+        "average_order_value": "+20%",
+        "customer_lifetime_value": "+30%"
+      },
+      "search_optimization": {
+        "search_success_rate": ">95%",
+        "zero_results_rate": "<5%",
+        "search_to_conversion": "+45%",
+        "search_abandonment": "<10%"
+      }
+    }
+  }
+}

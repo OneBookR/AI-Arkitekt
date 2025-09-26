@@ -1,0 +1,110 @@
+{
+  "apis": {
+    "ai_chat": [
+      {
+        "name": "OpenAI GPT-4",
+        "description": "Avancerad språkmodell för chatbots och textgenerering",
+        "pricing": "Från $0.03/1K tokens",
+        "useCase": "Kundtjänst, innehållsgenerering",
+        "gdprCompliant": true,
+        "integration": "REST API"
+      },
+      {
+        "name": "Anthropic Claude",
+        "description": "Säker och hjälpsam AI-assistent",
+        "pricing": "Från $0.008/1K tokens",
+        "useCase": "Säker kundinteraktion",
+        "gdprCompliant": true,
+        "integration": "REST API"
+      }
+    ],
+    "search": [
+      {
+        "name": "Algolia",
+        "description": "Snabb och relevant sökning",
+        "pricing": "Från $500/månad",
+        "useCase": "E-handel, innehållssökning",
+        "gdprCompliant": true,
+        "integration": "JavaScript SDK"
+      },
+      {
+        "name": "Elasticsearch",
+        "description": "Open source sökmotor",
+        "pricing": "Gratis (self-hosted)",
+        "useCase": "Avancerad sökning och analys",
+        "gdprCompliant": true,
+        "integration": "REST API"
+      }
+    ],
+    "recommendations": [
+      {
+        "name": "AWS Personalize",
+        "description": "ML-baserade rekommendationer",
+        "pricing": "Från $0.05/TIU",
+        "useCase": "E-handel, innehållsrekommendationer",
+        "gdprCompliant": true,
+        "integration": "AWS SDK"
+      }
+    ],
+    "monitoring": [
+      {
+        "name": "DataDog",
+        "description": "Fullständig observability-plattform",
+        "pricing": "Från $15/host/månad",
+        "useCase": "APM, infrastrukturövervakning",
+        "gdprCompliant": true,
+        "integration": "Agent + API"
+      }
+    ],
+    "payment": [
+      {
+        "name": "Stripe",
+        "description": "Komplett betalningsplattform",
+        "pricing": "2.9% + 30¢ per transaktion",
+        "useCase": "Online betalningar",
+        "gdprCompliant": true,
+        "integration": "REST API + SDK"
+      }
+    ],
+    "email": [
+      {
+        "name": "SendGrid",
+        "description": "E-postleverans och marknadsföring",
+        "pricing": "Gratis upp till 100 e-post/dag",
+        "useCase": "Transaktionsmail, nyhetsbrev",
+        "gdprCompliant": true,
+        "integration": "REST API"
+      }
+    ],
+    "image": [
+      {
+        "name": "Cloudinary",
+        "description": "Bildhantering och optimering",
+        "pricing": "Gratis upp till 25GB",
+        "useCase": "Bilduppladdning, transformation",
+        "gdprCompliant": true,
+        "integration": "REST API + SDK"
+      }
+    ]
+  },
+  "patterns": {
+    "missing_auth": {
+      "title": "Implementera robust autentisering",
+      "impact": 9,
+      "effort": 5,
+      "category": "Security"
+    },
+    "no_monitoring": {
+      "title": "Lägg till systemmonitorering",
+      "impact": 8,
+      "effort": 3,
+      "category": "DevOps"
+    },
+    "no_caching": {
+      "title": "Implementera caching-strategi",
+      "impact": 7,
+      "effort": 4,
+      "category": "Performance"
+    }
+  }
+}
