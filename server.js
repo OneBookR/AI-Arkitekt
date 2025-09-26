@@ -21,17 +21,15 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-// GitHub OAuth Strategy (only if credentials are provided)
-if (process.env.GITHUB_CLIENT_ID && process.env.GITHUB_CLIENT_SECRET) {
-  passport.use(new GitHubStrategy({
-    clientID: process.env.GITHUB_CLIENT_ID,
-    clientSecret: process.env.GITHUB_CLIENT_SECRET,
-    callbackURL: process.env.NODE_ENV === 'production' ? 'https://ai-arkitekt-production.up.railway.app/auth/github/callback' : 'http://localhost:3002/auth/github/callback'
-  }, (accessToken, refreshToken, profile, done) => {
-    profile.accessToken = accessToken;
-    return done(null, profile);
-  }));
-}
+// GitHub OAuth Strategy
+passport.use(new GitHubStrategy({
+  clientID: process.env.GITHUB_CLIENT_ID || 'dummy',
+  clientSecret: process.env.GITHUB_CLIENT_SECRET || 'dummy',
+  callbackURL: process.env.NODE_ENV === 'production' ? 'https://ai-arkitekt-production.up.railway.app/auth/github/callback' : 'http://localhost:3002/auth/github/callback'
+}, (accessToken, refreshToken, profile, done) => {
+  profile.accessToken = accessToken;
+  return done(null, profile);
+}));
 
 passport.serializeUser((user, done) => {
   done(null, user);
@@ -42,20 +40,7 @@ passport.deserializeUser((user, done) => {
 });
 
 // Auth routes
-app.get('/auth/github', (req, res) => {
-  if (!process.env.GITHUB_CLIENT_ID) {
-    // Mock login for development
-    req.session.user = {
-      id: 'mock-user',
-      username: 'testuser',
-      displayName: 'Test User',
-      photos: [{ value: 'https://github.com/identicons/testuser.png' }],
-      accessToken: 'mock-token'
-    };
-    return res.redirect(process.env.NODE_ENV === 'production' ? 'https://ai-arkitekt-production.up.railway.app' : 'http://localhost:3000');
-  }
-  passport.authenticate('github', { scope: ['repo'] })(req, res);
-});
+app.get('/auth/github', passport.authenticate('github', { scope: ['repo'] }));
 
 app.get('/auth/github/callback', 
   passport.authenticate('github', { failureRedirect: process.env.NODE_ENV === 'production' ? 'https://ai-arkitekt-production.up.railway.app' : 'http://localhost:3000' }),
@@ -65,13 +50,12 @@ app.get('/auth/github/callback',
 );
 
 app.get('/api/user', (req, res) => {
-  const user = req.user || req.session.user;
-  if (user) {
+  if (req.user) {
     res.json({
-      id: user.id,
-      login: user.username,
-      name: user.displayName,
-      avatar_url: user.photos[0]?.value
+      id: req.user.id,
+      login: req.user.username,
+      name: req.user.displayName,
+      avatar_url: req.user.photos[0]?.value
     });
   } else {
     res.status(401).json({ error: 'Not authenticated' });
@@ -79,37 +63,15 @@ app.get('/api/user', (req, res) => {
 });
 
 app.get('/api/user/repos', async (req, res) => {
-  const user = req.user || req.session.user;
-  if (!user) {
+  if (!req.user) {
     return res.status(401).json({ error: 'Not authenticated' });
   }
   
   try {
-    if (user.accessToken === 'mock-token') {
-      // Mock repos for development
-      const mockRepos = [
-        {
-          id: 1,
-          name: 'test-project',
-          description: 'Ett test-projekt för AI-Arkitekt',
-          html_url: 'https://github.com/testuser/test-project',
-          private: false
-        },
-        {
-          id: 2,
-          name: 'private-repo',
-          description: 'Privat repository',
-          html_url: 'https://github.com/testuser/private-repo',
-          private: true
-        }
-      ];
-      return res.json({ repos: mockRepos });
-    }
-    
     const fetch = require('node-fetch');
     const response = await fetch('https://api.github.com/user/repos?sort=updated&per_page=100', {
       headers: {
-        'Authorization': `token ${user.accessToken}`,
+        'Authorization': `token ${req.user.accessToken}`,
         'User-Agent': 'AI-Arkitekt'
       }
     });
