@@ -4,12 +4,12 @@ const path = require('path');
 const session = require('express-session');
 const passport = require('passport');
 const GitHubStrategy = require('passport-github2').Strategy;
-const apiRoutes = require('./routes/api');
+// const apiRoutes = require('./routes/api'); // Disabled for Railway deployment
 
 const app = express();
 
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: process.env.NODE_ENV === 'production' ? true : 'http://localhost:3000',
   credentials: true
 }));
 app.use(express.json());
@@ -121,8 +121,8 @@ app.get('/api/user/repos', async (req, res) => {
   }
 });
 
-// API routes
-app.use('/api', apiRoutes);
+// API routes - disabled for Railway deployment
+// app.use('/api', apiRoutes);
 
 // Legacy endpoints for backward compatibility
 const multer = require('multer');
@@ -316,7 +316,7 @@ app.get('/health', (req, res) => {
   res.json({ status: 'OK', timestamp: new Date().toISOString() });
 });
 
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
   console.log(`🏗️ AI-Arkitekt server running on port ${PORT}`);
